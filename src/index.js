@@ -23,7 +23,7 @@ module.exports.Client = class Client {
 
     createAuthLink = () => {
         if (this.scopes[0] && this.redirectUri && this.clientId) {
-            return `https://discord.com/oauth2/authorize?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join(" ")}`;
+            return `https://discord.com/oauth2/authorize?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join(",")}`;
         }
     }
 
